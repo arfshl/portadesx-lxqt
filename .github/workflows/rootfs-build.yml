@@ -43,7 +43,7 @@ jobs:
         sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt-2404 /bin/bash -c "wget https://raw.githubusercontent.com/arfshl/portadesx-lxqt/refs/heads/main/scripts/vncsetup.sh && sh vncsetup.sh && rm vncsetup.sh"
     - name: Setting up Help Script
       run: | 
-        sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt-2404 /bin/bash -c "wget https://raw.githubusercontent.com/arfshl/portadesx/refs/heads/main/scripts/portadesx-help -P /usr/local/bin && chmod +x /usr/local/bin/portadesx-help && portadesx-help"
+        sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt-2404 /bin/bash -c "wget https://raw.githubusercontent.com/arfshl/portadesx/refs/heads/main/scripts/portadesx-lxqt-help -P /usr/local/bin && chmod +x /usr/local/bin/portadesx-lxqt-help && portadesx-lxqt-help"
 
     - name: Install user apps
       run: | 
