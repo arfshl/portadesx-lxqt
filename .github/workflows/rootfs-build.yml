@@ -44,7 +44,6 @@ jobs:
     - name: Setting up Help Script
       run: | 
         sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt-2404 /bin/bash -c "wget https://raw.githubusercontent.com/arfshl/portadesx-lxqt/refs/heads/main/scripts/portadesx-lxqt-help -P /usr/local/bin && chmod +x /usr/local/bin/portadesx-lxqt-help && portadesx-lxqt-help"
-
     - name: Install user apps
       run: | 
         sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt-2404 /bin/bash -c "apt update && apt install chromium firefox vlc thunderbird okular lximage-qt kcalc lxqt-archiver libheif1 webp-pixbuf-loader fonts-liberation p7zip featherpad -y"
