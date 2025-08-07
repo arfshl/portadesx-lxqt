@@ -11,24 +11,24 @@ chmod 600 /home/portadesx/.vnc/passwd
 echo '#!/bin/sh
 xrdb $HOME/.Xresources
 export PULSE_SERVER=127.0.0.1
-export DISPLAY=:3
+export DISPLAY=:4
 startlxqt' >> /home/portadesx/.vnc/xstartup
 
 # Create script for starting VNC server
 echo '#!/bin/sh
 export USER=portadesx
 export HOME=/home/portadesx
-vncserver -name remote-desktop -localhost no :3
-echo 'VNC server address: 127.0.0.1:3'' >> /usr/local/bin/startvnc
+vncserver -name remote-desktop -localhost no :4
+echo 'VNC server address: 127.0.0.1:4 Password: 1234567890' >> /usr/local/bin/startvnc
 
 # Create script for stopping VNC server
 echo '#!/bin/sh
 export USER=portadesx
 export HOME=/home/portadesx
-vncserver -kill :3
-rm -rf /home/portadesx/.vnc/localhost:3.pid
+vncserver -kill :4
+rm -rf /home/portadesx/.vnc/localhost:4.pid
 rm -rf /tmp/.X1-lock
-rm -rf /tmp/.X11-unix/X3' >> /usr/local/bin/stopvnc
+rm -rf /tmp/.X11-unix/X4' >> /usr/local/bin/stopvnc
 
 # Create script for restarting VNC server
 echo '#!/bin/sh
