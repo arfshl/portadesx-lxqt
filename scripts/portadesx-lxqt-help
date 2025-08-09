@@ -20,6 +20,8 @@ echo "On RealVNC, add new connection, give it a name and enter default VNC serve
 echo "Start it and enter default password"
 echo "Use 'exit' commands if you wish to log-out from proot shell and back to termux shell, remember that this will stopping VNC server."
 echo
+echo "If you find out the warning when tried to launching application on desktop, simply click 'execute' since this warning aren't critical or dangerous."
+echo 
 echo "To use offline office document editing, install this extension from chromium browser"
 echo "https://chromewebstore.google.com/detail/office-editing-for-docs-s/gbkeegbaiigmenfmjfclcdgdpimamgkj"
 echo "Once installed,you just need to drag-and-drop documents from file manager to chromium browser window to edit it offline."
