@@ -48,7 +48,7 @@ proot-distro install portadesx-lxqt
 # Create Help Script
 wget https://raw.githubusercontent.com/arfshl/portadesx-lxqt/refs/heads/main/scripts/portadesx-lxqt-help -P /data/data/com.termux/files/usr/bin/
 chmod +x data/data/com.termux/files/usr/bin/portadesx-lxqt-help
-portadesx-help
+portadesx-lxqt-help
 
 
 
