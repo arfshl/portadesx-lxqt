@@ -12,23 +12,15 @@ apt upgrade -y -o Dpkg::Options::="--force-confold"
 apt install curl wget nano proot-distro termux-x11 pulseaudio vulkan-loader-android mesa-zink virglrenderer-mesa-zink virglrenderer-android -y
 
 # Create manual proot-distro configuration
-cat <<EOF > $PREFIX/etc/proot-distro/portadesx-lxqt.sh
-DISTRO_NAME="PortadesX LXQt"
-TARBALL_URL['aarch64']="https://github.com/arfshl/portadesx-lxqt/releases/download/24.04-202508070514/portadesx-lxqt-2404.tar.xz"
-TARBALL_SHA256['aarch64']="12280c9187964ff7f19fe33a1786205c8c299653c3119ca7fd34bef0f137e425"
-distro_setup() {
-        run_proot_cmd ln -s /storage/emulated/0/ /home/portadesx/Desktop/android_files
-}
-EOF
+wget https://raw.githubusercontent.com/portadesx/portadesx-lxqt/refs/heads/main/scripts/portadesx-lxqt.sh -P $PREFIX/etc/proot-distro/portadesx.sh
 
 # PulseAudio at startup on bash.bashrc
 echo 'LD_PRELOAD=/system/lib64/libskcodec.so
-pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1"
-sleep 5' >> $PREFIX/etc/bash.bashrc
+pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> $PREFIX/etc/bash.bashrc
 
 # Create startup script
 # for CLI session
-printf 'proot-distro login portadesx-lxqt --user portadesx' >> /data/data/com.termux/files/usr/bin/portadesx-cli
+printf 'proot-distro login portadesx-lxqt --user portadesx' >> /data/data/com.termux/files/usr/bin/portadesx-lxqt-cli
 
 # for X11 session
 cat <<EOF > /data/data/com.termux/files/usr/bin/portadesx-lxqt-gui
@@ -48,10 +40,10 @@ chmod +x /data/data/com.termux/files/usr/bin/portadesx-lxqt-cli
 
 # PulseAudio at Setup
 LD_PRELOAD=/system/lib64/libskcodec.so
-pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1"
+pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1 --exit-idle-time=-1"
 
 # Install rootfs
-proot-distro install portadesx
+proot-distro install portadesx-lxqt
 
 # Create Help Script
 wget https://raw.githubusercontent.com/arfshl/portadesx-lxqt/refs/heads/main/scripts/portadesx-lxqt-help -P /data/data/com.termux/files/usr/bin/
