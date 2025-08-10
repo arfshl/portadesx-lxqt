@@ -4,7 +4,7 @@ PortadesX:LXQt is a 'Flavor' of PortadesX, a Termux proot-distro rootfs with pre
 
 ### Core Features:
 
-- Pre-installed LXQt Desktop 
+- Pre-installed [LXQt](https://lxqt-project.org/) Desktop 
 - Pre-configured Sound, User, and VNC Server with easy command
 - Pre-installed Apps
 - Pre-configured access to android files
