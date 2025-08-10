@@ -1,7 +1,7 @@
 # Table of Contents
 - [List of portadesx commands](https://github.com/portadesx/portadesx-lxqt/blob/main/docs/README.md#list-of-portadesx-commands)
 - [Default users password and vnc credentials](https://github.com/portadesx/portadesx-lxqt/blob/main/docs/README.md#default-users-password-and-vnc-credentials)
-- [Apps launch warning]
+- [Apps launch warning](https://github.com/portadesx/portadesx-lxqt/tree/main/docs#apps-launch-warning)
 - [Update existing installation](https://github.com/portadesx/portadesx-lxqt/blob/main/docs/README.md#update-existing-installation)
 - [Upgrade to newer ubuntu release](https://github.com/portadesx/portadesx-lxqt/blob/main/docs/README.md#upgrade-to-newer-ubuntu-release)
 - [Office Software](https://github.com/portadesx/portadesx-lxqt/blob/main/docs/README.md#office-software)
