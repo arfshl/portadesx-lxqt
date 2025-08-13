@@ -99,7 +99,7 @@ jobs:
     - name: Decompress rootfs
       run: |
         sudo tar -xJf ubuntu-noble-arm-pd-v4.18.0.tar.xz
-        mv ubuntu-noble-arm portadesx
+        mv ubuntu-noble-arm portadesx-lxqt
     - name: Mount important filesystem
       run: |
         sudo mount --bind /proc $GITHUB_WORKSPACE/portadesx-lxqt/proc
