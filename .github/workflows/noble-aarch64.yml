@@ -65,6 +65,7 @@ jobs:
         sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "ln -s /usr/share/applications/lxqt-archiver.desktop /home/portadesx/Desktop/lxqt-archiver.desktop"
         sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "ln -s /usr/share/applications/featherpad.desktop /home/portadesx/Desktop/featherpad.desktop"
         sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "ln -s /usr/share/applications/qterminal.desktop /home/portadesx/Desktop/qterminal.desktop"
+        sudo chroot $GITHUB_WORKSPACE/portadesx /bin/bash -c "chmod -R 775 /home/portadesx/Desktop/"
     - name: Unmount important filesystem
       run: |
         sudo umount -l $GITHUB_WORKSPACE/portadesx-lxqt/proc
