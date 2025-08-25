@@ -4,7 +4,7 @@ wget https://raw.githubusercontent.com/portadesx/portadesx-lxqt/refs/heads/main/
 
 # Create startup script
 # for CLI session
-printf 'proot-distro login portadesx --user portadesx' >> /data/data/com.termux/files/usr/bin/portadesx-lxqt-cli
+printf 'proot-distro login portadesx-lxqt --user portadesx' >> /data/data/com.termux/files/usr/bin/portadesx-lxqt-cli
 
 # for X11 session
 cat <<EOF > /data/data/com.termux/files/usr/bin/portadesx-lxqt-gui
