@@ -46,7 +46,7 @@ jobs:
         sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "wget https://raw.githubusercontent.com/portadesx/portadesx-lxqt/refs/heads/main/scripts/portadesx-lxqt-help -P /usr/local/bin && chmod +x /usr/local/bin/portadesx-lxqt-help && portadesx-lxqt-help"
     - name: Install user apps
       run: | 
-        sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "apt update && apt install chromium firefox vlc thunderbird okular lximage-qt kcalc lxqt-archiver libheif1 webp-pixbuf-loader fonts-liberation p7zip featherpad -y && apt clean"
+        sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "apt update && apt install chromium firefox vlc thunderbird lximage-qt kcalc lxqt-archiver libheif1 webp-pixbuf-loader fonts-liberation p7zip featherpad -y && apt clean"
         sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "mkdir -p /home/portadesx/Desktop"
         # sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "mkdir -p /home/portadesx/.config/ && wget https://raw.githubusercontent.com/portadesx/portadesx/refs/heads/main/scripts/user-dirs.dirs -P /home/portadesx/.config/"
         sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "sudo sed -i 's|chromium --incognito %U|chromium --incognito --no-sandbox %U|' /usr/share/applications/chromium.desktop"
@@ -59,7 +59,7 @@ jobs:
         sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "ln -s /usr/share/applications/chromium.desktop /home/portadesx/Desktop/chromium.desktop"
         sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "ln -s /usr/share/applications/vlc.desktop /home/portadesx/Desktop/vlc.desktop"
         sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "ln -s /usr/share/applications/thunderbird.desktop /home/portadesx/Desktop/thunderbird.desktop"
-        sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "ln -s /usr/share/applications/org.kde.okular.desktop /home/portadesx/Desktop/org.kde.okular.desktop"
+        sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "ln -s /usr/share/applications/qpdfview.desktop /home/portadesx/Desktop/qpdfview.desktop"
         sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "ln -s /usr/share/applications/org.kde.kcalc.desktop /home/portadesx/Desktop/org.kde.kcalc.desktop"
         sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "ln -s /usr/share/applications/lximage-qt.desktop /home/portadesx/Desktop/lximage-qt.desktop"
         sudo chroot $GITHUB_WORKSPACE/portadesx-lxqt /bin/bash -c "ln -s /usr/share/applications/lxqt-archiver.desktop /home/portadesx/Desktop/lxqt-archiver.desktop"
