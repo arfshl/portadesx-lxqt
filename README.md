@@ -15,7 +15,7 @@ PortadesX:LXQt is a 'Flavor' of PortadesX, a Termux proot-distro rootfs with pre
 - [Chromium Web Browser](https://chromium.org)
 - [Mozilla Thunderbird](https://thunderbird.net)
 - [VLC Media Player](https://www.videolan.org/vlc/)
-- [Okular PDF viewer](https://okular.kde.org/)
+- [qpdfview Document viewer](https://launchpad.net/qpdfview)
 - [LXImage-QT Image Viewer](https://github.com/lxqt/lximage-qt)
 - [Featherpad text editor](https://github.com/tsujan/FeatherPad)
 - [LXQt File Archiver](https://github.com/lxqt/lxqt-archiver)
